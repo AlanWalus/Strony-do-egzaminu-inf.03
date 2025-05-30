@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Usługi kosmetyczne</title>
+        <link rel="stylesheet" href="styl.css">
+    </head>
+    <body>
+
+            <div id="lewy1">
+                <h2>W ofercie</h2>
+                <ul>
+                    <li><a href="twarz.html">Zabiegi na twarz</a></li>
+                        <ol>
+                            <li>Piling</li>
+                            <li>Maska</li>
+                            <li>Regulacja brwi</li>
+                        </ol>
+                    <li>Masaż</li>
+                    <li>Diety oczyszczające</li>
+                </ul>
+                <a href="index.html">Do strony głównej</a>
+            </div>
+            <div id="prawy1">
+                <h1>Salon Kosmetyczny</h1>
+            </div>
+            <div id="prawy2">
+                <h2>Sprawdź cenę swojej wizyty</h2>
+                <form method="post">
+                    <input type="checkbox" id="Piling">
+                    <label for="Piling">Piling</label><br>
+                    <input type="checkbox" id="Maska">
+                    <label for="Maska">Maska</label><br>
+                    <input type="checkbox" id="Masaz">
+                    <label for="Masaz">Masaż twarzy</label><br>
+                    <input type="checkbox" id="Regulacja">
+                    <label for="Regulacja">Regulacja brwi</label><br>
+                    <button onclick="cenaZabieg()">Sprawdź cenę</button><br>
+                        <span id="wynik"></span>
+                    </button>
+                </form>
+            </div>
+            <div id="lewy2">
+                <img src="obraz1.jpg" alt="Kosmetyczka">
+            </div>
+
+        <footer>
+            <p>Autor:00</p>
+        </footer>
+        <script>
+            
+            function cenaZabieg(){
+                var cena = 0;
+                event.preventDefault();
+                if(document.getElementById("Piling").checked){
+                    cena = cena + 45;
+                }
+                if(document.getElementById("Maska").checked){
+                    cena = cena + 30;
+                }
+                if(document.getElementById("Masaz").checked){
+                    cena = cena + 20;
+                }
+                if(document.getElementById("Regulacja").checked){
+                    cena = cena + 5;
+                }
+                document.getElementById('wynik').innerHTML = "Cena zabiegów: " + cena + ", gdzie " + cena + " oznacza całkowitą cenę wybranych zabiegów";
+
+
+
+
+            }
+        </script>
+    </body>
+</html>

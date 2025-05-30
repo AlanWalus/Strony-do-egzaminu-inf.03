@@ -1,0 +1,19 @@
+Styl CSS witryny internetowej
+Cechy formatowania CSS, działające na obu stronach:
+
+
+
+
+
+Obraz 3. Fragment strony fryzura.html
+
+Strona 4 z 6
+
+Skrypt
+Wymagania dotyczące skryptu:
+‒ Napisany w języku wykonywanym po stronie przeglądarki
+‒ Uruchamia się po wciśnięciu przycisku na stronie fryzura.html
+‒ Podaje cenę strzyżenia w zależności od wyboru dokonanego przez pola radio zgodnie z cennikiem
+w tabeli
+‒ Wyświetla wynik działania pod przyciskiem według wzoru: „Cena strzyżenia: <wartość>”, gdzie
+<wartość> oznacza cenę strzyżenia dla wskazanej długości włosów

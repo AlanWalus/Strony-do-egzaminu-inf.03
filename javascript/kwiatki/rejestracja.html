@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+
+    
+</head>
+<body>
+    <script>
+
+        function nastepny1() {
+            let $blok1 = document.getElementById('pierwszy').style.visibility = 'hidden';
+            let $blok2 = document.getElementById('drugi').style.visibility = 'visible';
+            let blok1 = document.getElementsByTagName('div')[0].style.visibility = 'hidden';
+            
+        }
+        function nastepny2() {
+            let $blok2 = document.getElementById('drugi').style.visibility = 'hidden';
+            let $blok3 = document.getElementById('trzeci').style.visibility = 'visible';
+
+        }
+        function Zatwierdzenie(){
+            let $imie = document.getElementById('imie').value
+            let $nazwisko = document.getElementById('nazwisko').value
+    
+            if (document.getElementById('haslo1').value != document.getElementById('haslo2').value) {
+                alert('Podane hasła różnią się')
+            }
+            console.log('Witaj ' + $imie + ' ' + $nazwisko)
+    
+        }
+    </script>
+    <header class="baner">
+        <h1>Formularz rejestracyjny konferencji <em><strong>Nasze Kwiaty</strong></em></h1>
+    </header>
+    <main class="main">
+        <form action="" method="post">
+        <div id="pierwszy">
+            <h2>Dane osobowe</h2>
+            <input type="text" id="imie" placeholder="Wpisz imię..." required>
+            <input type="text" id="nazwisko" placeholder="Wpisz nazwisko..." required>
+            <button onclick="nastepny1()">Następna karta</button>
+        </div>
+        <div id="drugi">
+            <h2>Dane kontaktowe</h2>
+            <input type="email" id="email" placeholder="Twój e-mail..." required>
+            <input type="tel" id="numer" placeholder="Twój numer telefonu..." required>
+            <button onclick="nastepny2()">Następna karta</button>
+        </div>
+        <div id="trzeci">
+            <h2>Hasło do logowania</h2>
+            <input type="password" id="haslo1" placeholder="Podaj hasło" required>
+            <input type="password" id="haslo2" placeholder="Powtórz hasło" required>
+           <input type="submit" value="Zatwierdź" onclick="Zatwierdzenie(); return false;">
+        </div>
+    </form>
+
+
+    </main>
+    <footer class="1">
+        <video src="motyl.mp4" controls>Przeglądarka nie obsługuje tego formatu</video>
+    </footer>
+    <footer class="2">
+        <h3>Plan konferencji</h3>
+        <table>
+            <tr>
+                <td>9:00 - 12:00</td>
+                <td>Pielęgnacja roślin</td>
+            </tr>
+            <tr>
+                <td>13:00 - 15:00</td>
+                <td>Targi kwiatowe</td>
+            </tr>
+        </table>
+    </footer>
+    <footer class="3">
+        <p><a href="https://kwiaty.pl/">Internetowa kwiaciarnia</a></p>
+
+    </footer>
+    <footer class="4">
+        <p>Formularz wykonał: </p>
+    </footer>
+    
+</body>
+</html>
+

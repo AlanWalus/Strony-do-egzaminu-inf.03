@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Margherita</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+    <header>
+        <h2>Najlepsza pizza w mieście <img src="logo.png" height="100px"> </h2>
+        
+    </header>
+    <section id="lewy" class="lewy">
+        <P>U nas zamówisz pizzę z dowozem</P>
+        <a href="logo.png">Nasze logo</a>
+
+
+    </section>
+
+    <section id="srodkowy" class="srodkowy">
+        <h3>Pizzeria Margherita</h3>
+        <p>ul. Botaniczna 4, Zielona Góra</p>
+    </section>
+    <section id="prawy" class="prawy">
+        <h3>Oferta</h3>
+        <ol>
+            <li>Pizza</li>
+            <li>Lasange</li>
+            <li>Sałatki</li>
+        </ol>
+        <p><a href="Oferta.txt">Pobierz pełną ofertę</a></p>
+    </section>
+    <section id="dol" class="dol">
+        <h3>Oblicz koszt dostawy</h3>
+        <input type="checkbox" name="lokalny" id="lokalny">
+        <label for="lokalny">Jestem z Zielonej Góry</label><br>
+        <p>albo</p>
+        <label for="daleko">Podaj liczbę kilometrów od Zielonej Góry: </label>
+        <input type="number" name="daleko" id="daleko"><br>
+        <button onclick="dowoz(); return false;">Oblicz</button><br>
+        <p id="wynik"></p>
+    </section>
+    <footer>
+        <p>Stronę internetową opracował: <b>Ja</b></p>
+    </footer>
+    <script>
+        function dowoz(){
+            let lokalny = document.getElementById("lokalny")
+            let daleko = document.getElementById("daleko").value
+            if (lokalny.checked) {
+                document.getElementById("wynik").innerHTML = "Dowieziemy Twoją pizzę za darmo"
+            }
+            else {
+                document.getElementById("wynik").innerHTML = "Dowóz będzie cię kosztował " + (daleko*2) + " złotych"
+            }
+        }
+    </script>
+
+</body>
+</html>

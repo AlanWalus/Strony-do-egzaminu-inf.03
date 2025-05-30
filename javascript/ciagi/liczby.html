@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ciągi liczbowe</title>
+        <link rel="stylesheet" href="styl2.css">
+    </head>
+    <body>
+        <header>
+            <div id="blok1">
+                <h2>Poznaj Ciągi Liczbowe</h2>
+            </div>
+            <div id="blok2">
+                <a href="liczby.html"><h5>Ciągi arytmetyczne</h5></a>
+            </div>
+            <div id="blok3">
+                <a href="fib.html"><h5>Ciągi Fibonacciego</h5></a>
+            </div>
+            <div id="blok4">
+                <img src="obraz1.png" alt="Fibonacci">
+            </div>
+        </header>
+        <main>
+            <div id="blok5">
+                <ul>
+                    <li>Ciągi arytmetyczne</li>
+                    <li>Ciągi geometryczne</li>
+                    <li>ciąg Fibonacciego</li>
+                </ul>
+            </div>
+            <div id="blok6">
+                <h2>Generowanie ciągu arytmetycznego</h2>
+                <form method="post">
+                    <label for="A1">Pierwszy wyraz A1:</label><br>
+                    <input type="number" name="A1" id="A1"><br>
+                    <label for="R">Różnica ciągu R:</label><br>
+                    <input type="number" name="R" id="R"><br>
+                    <label for="N">Liczba wyrazów w ciągu N:</label><br>
+                    <input type="number" name="N" id="N"><br>
+                    <button type="button" onclick="ciag()">Generuj Ciąg</button><br>
+                    <span id="wynik"></span>
+
+                </form>
+
+            </div>
+        </main>
+        <footer>
+            <script>
+                function ciag(){
+                    event.preventDefault();
+                let A1 = document.getElementById('A1').value;
+                A1 = parseInt(A1);
+                let R = document.getElementById('R').value;
+                R = parseInt(R);
+                let N = document.getElementById('N').value;
+                N = parseInt(N);
+                let wynik = "Ciąg artmetyczny zawiera wyrazy: ";
+                wynik += A1;
+                for(let i = 1; i<N; i++){
+                    A1 = A1 + R;
+                    wynik += ", " + A1;
+                }
+                    document.getElementById('wynik').innerHTML = wynik;
+                }
+            </script>
+            <p>Autor:00</p>
+        </footer>
+
+    </body>
+</html>

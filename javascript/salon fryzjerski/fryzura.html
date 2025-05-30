@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Usługi fryzjerskie</title>
+        <link rel="stylesheet" href="styl2.css">
+    </head>
+    <body>
+        <main>
+        <div id="lewy1">
+            <a href="index.html"><h2>SALON FRYZJERSKI</h2></a>
+            <img src="obraz2.jpg" alt="Czesanie">
+        </div>
+        <div id="lewy2">
+            <h3>Dziś promocja na strzyżenie włosów</h3>
+            <form method="post">
+            <input type="radio" id="Krotkie" name="rodzaj" > 
+            <label for="Krotkie">Krótkie</label><br>
+            <input type="radio" id="Srednie" name="rodzaj">
+            <label for="Srednie">Średnie</label ><br>
+            <input type="radio" id="Poldlugie" name="rodzaj">
+            <label for="Poldlugie">Półdługie</label><br>
+            <input type="radio" id="Dlugie" name="rodzaj">
+            <label for="Dlugie">Długie</label><br>
+
+            <button onclick="wynikCena()">Odkryj promocję</button>
+            <span id="wynik"></span>
+        </form>
+        </div>
+    </main>
+    <aside>
+        <div id="prawy1">
+            <h2>MENU</h2>
+        </div>
+        <div id="prawy2">
+            <ol>
+                <li><a href="fryzura.html">Strzyżenie</a> </li>
+                    <ul>
+                        <li>krótkie</li>
+                        <li>średnie</li>
+                        <li>półdługie</li>
+                        <li>długie</li>
+                    </ul>
+                <li>Czesanie </li>
+                <li>Koloryzacja </li>
+            </ol>
+        </div>
+        <div id="prawy3">
+            <img src="obraz1.jpg" alt="Fryzjer">
+        </div>
+    </aside>
+        <footer>
+            <p>Autor:</p>
+
+        </footer>
+        <script>
+function wynikCena(){
+    event.preventDefault();
+    var cena = 0;
+if (document.getElementById('Krotkie').checked){
+    cena = 25;
+}
+if (document.getElementById('Srednie').checked){
+    cena = 30;
+}
+if (document.getElementById('Poldlugie').checked){
+    cena = 40;
+}
+if (document.getElementById('Dlugie').checked){
+    cena = 50;
+}
+document.getElementById('wynik').innerHTML = "Cena strzyżenia: " + cena;
+}
+
+
+        </script>
+    </body>
+</html>

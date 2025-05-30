@@ -1,0 +1,62 @@
+body {
+    font-family: Verdana;
+    color: #2F2F2F;
+    
+
+}
+header > div{
+    float: left;
+}
+main > div {
+    float: left;
+}
+footer {
+background-color: #dcdcdc;
+text-align: center;
+}
+#blok1 {
+    background-color: #DCDCDC;
+    width: 55%;
+    height: 80px;
+    text-align: center;
+    float: left;
+}
+#blok2 {
+    background-color: #DCDCDC;
+    width: 15%;
+    height: 80px;
+    float: left;
+}
+#blok3 {
+        background-color: #DCDCDC;
+    width: 15%;
+    height: 80px;
+    float: left;
+}
+#blok4 {
+    background-color: #DCDCDC;
+    width: 15%;
+    height: 80px;
+    float: left;
+}
+#blok5 {
+    background-color: #808080;
+    width: 30%;
+    height: 450px;
+}
+#blok6 {
+    background-color: #808080;
+    width: 70%;
+    height: 450px;
+    
+}
+h5 {
+    color: #808080;
+    border: 1px; solid: #808080;
+    margin: 7px;
+    padding: 10px;
+    font-size: 80%;
+}
+input {
+    color: gray;
+}

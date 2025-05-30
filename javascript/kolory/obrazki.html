@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <section class="pierwszy">
+        <img src="pszczola.jpg" id="pszczola" alt="pszczoła na fioletowym kwiatku">
+        <form action=""></form>
+        <input type="radio" id="Blurik" name="lody">Blur<br>
+        <input type="radio" id="Sepik" name="lody">Sepia<br>
+        <input type="radio" id="Negatywik" name="lody">Negatyw<br>
+        <button onclick="trans1()">Zastosuj</button>
+        </form>
+    </section>
+    <section class="drugi">
+        <img src="pomarancza.jpg" id="pomarancza" alt="drzewo pomarańczy"><br>
+        <button onclick="trans21()">Kolorowy</button> 
+        <button onclick="trans22()">Czarno-biały</button>
+    </section>
+    <section class="trzeci">
+        <img src="owoce.jpg" id="owoce" alt="Kosz pełen owoców">
+        <input type="range" id="suwak1" min="0" max="100" value="100"><br>
+
+        <button onclick="trans3()">Zastosuj</button>
+    </section>
+    <section class="">
+        <img src="zolw.jpg" id="zolw" alt="Żółw w wodzie">
+        <input type="range" id="suwak2" min="0" max="250" ><br>
+        <button onclick="trans4()">Zastosuj</button>
+    </section>
+    <footer>
+        <p><a href="http://www.css.com/" target="_blank"></a>Zobacz inne efekty obrazu</p>
+            <p>Stronę wykonał: 000</p>
+            
+    </footer>
+</body>
+</html>
+<script>
+    function trans1(){
+        if (document.getElementById('Blurik').checked) {
+            document.getElementById('pszczola').style.filter = "blur(6px)"
+        }
+        if (document.getElementById('Sepik').checked) {
+            document.getElementById('pszczola').style.filter = "sepia(100%)"
+        }
+        if (document.getElementById('Negatywik').checked) {
+            document.getElementById('pszczola').style.filter = "invert(100%)"
+        }
+    }
+    function trans21(){
+        document.getElementById('pomarancza').style.filter = "grayscale(0%)"
+
+    }
+    function trans22(){
+        document.getElementById('pomarancza').style.filter = "grayscale(100%)"
+        
+    }
+    function trans3(){
+        
+        suwak1 = document.getElementById('suwak1').value
+        document.getElementById('owoce').style.filter = "opacity(" +suwak1+ "% )"
+    }
+    function trans4(){
+        suwak2 = document.getElementById('suwak2').value
+        document.getElementById('zolw').style.filter = "brightness(" +suwak2+ "% )"
+
+    }
+</script>

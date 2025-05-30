@@ -1,0 +1,19 @@
+wybierające jedynie miejsce i liczbę dni dla wycieczek, których cena jest mniejsza od
+1000 zł
+SELECT `miejsce`, `liczbaDni` FROM `wycieczki` WHERE `cena` < 1000;
+
+‒ Zapytanie 2: liczące średnią cenę dla wycieczek pogrupowanych ze względu na liczbę dni
+(czyli średnia cena wycieczek jednodniowych, dwudniowych itd.). Kwerenda wybiera jedynie
+liczbę dni oraz średnią cenę, której kolumnę należy nazwać (alias) sredniaCena
+SELECT `liczbaDni`, AVG(`cena`) AS "sredniaCena" FROM `wycieczki` GROUP BY `liczbaDni`;
+
+‒ Zapytanie 3: wybierające jedynie miejsce wycieczki i odpowiadającą mu nazwę zdjęcia dla
+wycieczek, których cena jest wyższa od 500 zł. Należy posłużyć się relacją
+SELECT `miejsce`, `zdjecia`.`nazwa` FROM `wycieczki` JOIN `zdjecia` ON `wycieczki`.`id` = `zdjecia`.`Wycieczki_id` WHERE `cena` > 500;
+
+
+‒ Zapytanie 4: 
+Tworzące użytkownika Ewa o haśle Ewa!Ewa dla bazy wycieczki na serwerze
+localhost
+CREATE USER 'Ewa'@'localhost' IDENTIFIED BY 'Ewa!Ewa';
+GRANT ALL PRIVILEGES ON `wycieczki`.* TO 'Ewa'@'localhost';

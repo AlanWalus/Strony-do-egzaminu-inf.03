@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>Zwiedzamy Polskę</h1>
+    </header>
+
+    <section class="lewy">
+        <button onclick="poprzedni()">&lt;</button>
+    </section>
+
+    <section class="srodkowy">
+        <img src="1.jpg" id="aktywny" alt="Aktywne zdjęcie">
+    </section>
+
+    <section class="prawy">
+        <button onclick="nastepny()">&gt;</button>
+    </section>
+
+    <section class="miniatury">
+        <img src="1.jpg" alt="Gdańsk">
+        <img src="2.jpg" alt="Kraków">
+        <img src="3.jpg" alt="Niedzica">
+        <img src="4.jpg" alt="Pieniny">
+        <img src="5.jpg" alt="Szklarska Poręba">
+        <img src="6.jpg" alt="Tatry">
+        <img src="7.jpg" alt="Wrocław">
+    </section>
+
+    <footer>
+        <h3>Autorem galerii jest:</h3>
+        <p>000</p>
+        <a href="http://pixabay.com" target="_blank">Więcej zdjęć</a>
+    </footer>
+    <script>
+
+        function nastepny(){
+            let blok = document.getElementsByClassName('srodkowy')[0].getElementsByTagName("img")[0]
+            let skracaniekutasa = Number(blok.src.substring(blok.src.length-5, blok.src.length-4))
+            let nastepny = skracaniekutasa + 1
+            if(nastepny > 7){
+                nastepny = 1
+            }
+            blok.src = nastepny + ".jpg"
+            console.log(skracaniekutasa)
+            console.log(blok.src)
+            console.log(blok.length)
+
+        }
+        function poprzedni(){
+            let blok = document.getElementsByClassName('srodkowy')[0].getElementsByTagName("img")[0]
+            let skracaniekutasa = Number(blok.src.substring(blok.src.length-5, blok.src.length-4))
+            let nastepny = skracaniekutasa + 1
+            if(nastepny < 1){
+                nastepny = 7
+            }
+            blok.src = nastepny + ".jpg"
+        }
+    </script>
+</body>
+</html>
