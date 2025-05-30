@@ -1,0 +1,24 @@
+
+
+
+‒ Zapytanie 1: aktualizujące tabelę wagi. Rekordy, w których pole lokalizacje_id jest równe: 2, 3, 4 mają
+zmienione datę i czas na wartości aktualne. Zapytanie ma charakter uniwersalny, zawsze zmienia
+wartość na aktualną datę / czas
+
+UPDATE `wagi` SET `dzien` = CURRENT_DATE(), `czas` = CURRENT_TIME() WHERE `wagi`.`id` = 2 OR `wagi`.`id` = 3 OR `wagi`.`id` = 4;
+
+‒ Zapytanie 2: wybierające jedynie ulicę z tabeli lokalizacje
+
+SELECT `ulica` FROM `lokalizacje`;
+
+‒ Zapytanie 3: wstawiające do tabeli wagi rekord z danymi: lokalizacje_id: 5, waga: losowa
+liczba z przedziału 1..10 (wygenerowana funkcją), rejestracja: DW12345, aktualna data (do
+pola dzien) i aktualny czas (do pola czas). Klucz główny nadawany automatycznie. Zapytanie
+ma charakter uniwersalny, zawsze wstawia wartość aktualnej daty i czasu
+
+INSERT INTO `wagi` (`id`, `lokalizacje_id`, `waga`, `rejestracja`, `dzien`, `czas`) VALUES (NULL, '5', FLOOR(RAND()*(10-1+1)+1), 'DW12345', CURRENT_DATE(), CURRENT_TIME())
+
+‒ Zapytanie 4: wybierające jedynie pola rejestracja, waga, dzien, czas z tabeli wagi
+i odpowiadające mu pole ulica z tabeli lokalizacje dla pojazdów, których waga na oś
+przekracza 5 t. Należy posłużyć się relacją
+SELECT `rejestracja`, `waga`, `dzien`, `czas`, `lokalizacje`.`ulica` FROM `wagi` JOIN lokalizacje ON `wagi`.`lokalizacje_id` = `lokalizacje`.`id` WHERE `waga` > 5;

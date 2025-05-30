@@ -1,0 +1,68 @@
+*{
+    font-family: Helvetica;
+    margin: -1px;
+}
+header, footer {
+    background-color: sienna;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+footer {
+    clear: both;
+}
+.lewy, .prawy {
+    background-color: navajowhite;
+    width: 15%;
+    height: 700px;    
+}
+.lewy{
+    float: left;
+}
+.mid {
+    width: 70%;
+    height: 700px;
+    overflow: scroll;
+    float: left;
+
+}
+.prawy {
+    float: right;
+}
+img {
+    width: 100%;
+}
+strong {
+    font-weight: bold;
+}
+.blok {
+    float: left;
+    width: 46%;
+    margin: 2%;
+    position: relative;
+}
+h3, p, a{
+    opacity: 0;
+    position: relative;
+}
+h3 {
+    top: 5%;
+}
+p {
+    top: 30%
+}
+a {
+    top: 70%;
+    left: 70%;
+    background-color: sienna;
+    padding: 15px;
+}
+.blok:hover img{
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+}
+.blok:hover h3, .blok:hover p, .blok:hover a{
+    opacity: 1;
+}
+
+

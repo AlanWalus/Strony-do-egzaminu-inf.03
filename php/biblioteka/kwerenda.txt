@@ -1,0 +1,5 @@
+SELECT `imie`, `nazwisko` FROM `autorzy` ORDER BY `nazwisko` ASC;
+INSERT INTO `czytelnicy` (`id`, `imie`, `nazwisko`, `kod`) VALUES (null, 'Ewa', 'Kowalska', 145321);
+SELECT `tytul` FROM `ksiazki` WHERE `id_kategoria` = 2;
+SELECT `tytul` FROM `ksiazki` JOIN `wypozyczenia` ON 
+`ksiazki`.`id` = `wypozyczenia`.`id_ksiazka` WHERE `id_czytelnik` = 2;
