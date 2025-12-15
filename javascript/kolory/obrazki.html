@@ -13,9 +13,9 @@
     <section class="pierwszy">
         <img src="pszczola.jpg" id="pszczola" alt="pszczoła na fioletowym kwiatku">
         <form action=""></form>
-        <input type="radio" id="Blurik" name="lody">Blur<br>
-        <input type="radio" id="Sepik" name="lody">Sepia<br>
-        <input type="radio" id="Negatywik" name="lody">Negatyw<br>
+        <input type="radio" id="blur1" name="lody">Blur<br>
+        <input type="radio" id="sepia1" name="lody">Sepia<br>
+        <input type="radio" id="negatyw1" name="lody">Negatyw<br>
         <button onclick="trans1()">Zastosuj</button>
         </form>
     </section>
@@ -44,13 +44,13 @@
 </html>
 <script>
     function trans1(){
-        if (document.getElementById('Blurik').checked) {
+        if (document.getElementById('blur1').checked) {
             document.getElementById('pszczola').style.filter = "blur(6px)"
         }
-        if (document.getElementById('Sepik').checked) {
+        if (document.getElementById('sepia1').checked) {
             document.getElementById('pszczola').style.filter = "sepia(100%)"
         }
-        if (document.getElementById('Negatywik').checked) {
+        if (document.getElementById('negatyw1').checked) {
             document.getElementById('pszczola').style.filter = "invert(100%)"
         }
     }
