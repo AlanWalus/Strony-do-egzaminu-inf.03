@@ -75,74 +75,6 @@ function Generuj(){
     </script>
 </head>
 <body>
-    <script>
-        function Wyslij(){
-            let poleTekstowe = document.getElementById('tekst');
-            let tekstWiadomosci = poleTekstowe.value.trim(); //trim usuwa białe znaki
-
-            if (tekstWiadomosci){
-                let chat = document.getElementById('chat');
-
-                let nowaWiadomosc = document.createElement('section');
-                nowaWiadomosc.className = 'Jolanta';
-
-                let obraz = document.createElement('img');
-                obraz.src = 'Jolka.jpg';
-
-                let wypowiedz = document.createElement('p');
-                wypowiedz.textContent = tekstWiadomosci;
-
-                nowaWiadomosc.appendChild(obraz);
-                nowaWiadomosc.appendChild(wypowiedz);
-
-                chat.appendChild(nowaWiadomosc);
-
-                poleTekstowe.value = '';
-
-                chat.scrollTop = chat.scrollHeight;
-                
-            }
-        }
-
-
-function Generuj(){
-    let odpowiedzi = [
-        "Świetnie!",
-        "Kto gra główną rolę?",
-        "Lubisz filmy Tego reżysera?",
-        "Będę 10 minut wcześniej",
-        "Może kupimy sobie popcorn?",
-        "Ja wolę Colę",
-        "Zaproszę jeszcze Grześka",
-        "Tydzień temu też byłem w kinie na Diunie",
-        "Ja funduję bilety"
-
-    ];
-    let losowyIndeks = Math.floor(Math.random() * odpowiedzi.length);
-    let losowaOdpowiedz = odpowiedzi[losowyIndeks];
-
-    let chat = document.getElementById('chat');
-
-    let nowaWiadomosc = document.createElement('section');
-    nowaWiadomosc.className = 'Krzysiek';
-
-    let obraz = document.createElement('img');
-                obraz.src = 'Krzysiek.jpg';
-
-                let wypowiedz = document.createElement('p');
-                wypowiedz.textContent = losowaOdpowiedz;
-
-                nowaWiadomosc.appendChild(obraz);
-                nowaWiadomosc.appendChild(wypowiedz);
-
-                chat.appendChild(nowaWiadomosc);
-
-                chat.scrollTop = chat.scrollHeight;
-
-
-}
-
-    </script>
     <header>
         <h2>Chat</h2>
     </header>
@@ -185,7 +117,3 @@ function Generuj(){
     </footer>
 </body>
 </html>
-
-
-
-
