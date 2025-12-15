@@ -42,21 +42,21 @@
 
         function nastepny(){
             let blok = document.getElementsByClassName('srodkowy')[0].getElementsByTagName("img")[0]
-            let skracaniekutasa = Number(blok.src.substring(blok.src.length-5, blok.src.length-4))
-            let nastepny = skracaniekutasa + 1
+            let przemieszczanie = Number(blok.src.substring(blok.src.length-5, blok.src.length-4))
+            let nastepny = przemieszczanie + 1
             if(nastepny > 7){
                 nastepny = 1
             }
             blok.src = nastepny + ".jpg"
-            console.log(skracaniekutasa)
+            console.log(przemieszczanie)
             console.log(blok.src)
             console.log(blok.length)
 
         }
         function poprzedni(){
             let blok = document.getElementsByClassName('srodkowy')[0].getElementsByTagName("img")[0]
-            let skracaniekutasa = Number(blok.src.substring(blok.src.length-5, blok.src.length-4))
-            let nastepny = skracaniekutasa + 1
+            let przemieszczanie = Number(blok.src.substring(blok.src.length-5, blok.src.length-4))
+            let nastepny = przemieszczanie + 1
             if(nastepny < 1){
                 nastepny = 7
             }
